@@ -1,0 +1,7 @@
+description: >
+  This command restore the composer cache
+
+steps:
+  - restore_cache:
+      name: Restore composer dependencies
+      key: composer-{{ checksum "composer.lock" }}

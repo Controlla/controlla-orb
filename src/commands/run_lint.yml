@@ -1,0 +1,5 @@
+description: >
+  Run linter
+
+steps:
+  - run: npm run lint

@@ -1,0 +1,10 @@
+description: >
+  Run composer commands.
+
+steps:
+  - run: cp .env.testing.example .env
+  - run: composer install -n --prefer-dist
+  - run: composer run key:generate
+  - run: php artisan vue-i18n:generate
+  - run: php artisan migrate --seed
+  - run: composer run jwt:generate

@@ -1,0 +1,19 @@
+description: >
+  Deploy to QA
+
+executor: laravel
+
+parameters:
+  enviroment:
+    type: string
+    default: "laravel"
+    description: "Type of enviroment"
+steps:
+  - restore_composer_cache
+  - restore_npm_cache
+  - controlla_release
+  - aws_permissions
+  - zip
+  - setup
+  - deploy:
+      enviroment: << parameters.enviroment >>

@@ -1,0 +1,14 @@
+description: >
+  Install dependencies and run tests
+
+executor: laravel
+
+steps:
+  - php_extensions
+  - restore_composer_cache
+  - run_composer
+  - save_composer_cache
+  - restore_npm_cache
+  - npm_install
+  - save_npm_cache
+  - run_tests

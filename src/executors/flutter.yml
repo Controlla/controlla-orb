@@ -1,0 +1,4 @@
+description: >
+  Highly cached minimal Ubuntu docker designed for Cirrus with flutter installed.
+docker:
+  - image: cirrusci/flutter

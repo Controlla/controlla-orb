@@ -1,0 +1,11 @@
+description: >
+  Deploy in aws enviroment.
+
+parameters:
+  enviroment:
+    description: Select a specific enviroment.
+    default: latest
+    type: string
+
+steps:
+  - run: eb deploy <<parameters.enviroment>> --profile controlla

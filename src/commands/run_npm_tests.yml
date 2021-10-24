@@ -1,0 +1,5 @@
+description: >
+  Run tests
+
+steps:
+  - run: npm run test

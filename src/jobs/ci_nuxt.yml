@@ -1,0 +1,12 @@
+description: >
+  Install dependencies and run tests
+
+executor: nuxt
+
+steps:
+  - checkout
+  - restore_npm_cache
+  - npm_install
+  - save_npm_cache
+  - run_lint
+  - run_npm_tests

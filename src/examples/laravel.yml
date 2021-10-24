@@ -1,0 +1,34 @@
+description: Controlla continuos integration tools.
+usage:
+  version: 2.1
+
+  orbs:
+    controlla-orb: controlla-mx/controlla-orb@dev:alpha
+
+  workflows:
+    controlla-orb:
+      jobs:
+        - ci-laravel:
+            filters:
+              branches:
+                only:
+                  - master
+                  - QA
+        - cd-laravel:
+            enviroment: QA-env
+            context: AWS
+            requires:
+              - build
+            filters:
+              branches:
+                only:
+                  - QA
+        - cd-laravel:
+            enviroment: Prod-env
+            context: AWS
+            requires:
+              - build
+            filters:
+              branches:
+                only:
+                  - master

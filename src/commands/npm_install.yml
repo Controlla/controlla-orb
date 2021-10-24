@@ -1,0 +1,5 @@
+description: >
+  Install npm depencies
+
+steps:
+  - run: cd frontend && yarn install

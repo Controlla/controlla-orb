@@ -1,0 +1,8 @@
+description: >
+  Save composer cache.
+
+steps:
+  - save_cache:
+      name: Cache composer dependencies
+      key: composer-{{ checksum "composer.lock" }}
+      paths: vendor
