@@ -3,31 +3,31 @@ usage:
   version: 2.1
 
   orbs:
-    controlla-orb: controlla-mx/controlla-orb@dev:alpha
+    controlla: controlla/controlla@1.0.1
 
   workflows:
-    controlla-orb:
+    build-deploy:
       jobs:
-        - ci-laravel:
+        - controlla/ci_laravel:
             filters:
               branches:
                 only:
                   - master
                   - QA
-        - cd-laravel:
-            enviroment: QA-env
+        - controlla/cd_laravel:
+            enviroment: ExpertQA-env
             context: AWS
             requires:
-              - build
+              - controlla/ci_laravel
             filters:
               branches:
                 only:
                   - QA
-        - cd-laravel:
-            enviroment: Prod-env
+        - controlla/cd_laravel:
+            enviroment: Expert-env
             context: AWS
             requires:
-              - build
+              - controlla/ci_laravel
             filters:
               branches:
                 only:
