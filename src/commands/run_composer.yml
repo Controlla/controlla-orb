@@ -1,10 +1,6 @@
-description: >
-  Run composer commands.
+description: Run composer commands.
 
 steps:
-  - run: cp .env.ci.example .env
-  - run: composer install -n --prefer-dist
-  - run: composer run key:generate
-  - run: php artisan vue-i18n:generate
-  - run: php artisan migrate --seed
-  - run: composer run jwt:generate
+  - run:
+      name: Run composer composer
+      command: <<include(scripts/run_composer.sh)>>
