@@ -11,6 +11,7 @@ parameters:
     default: "laravel"
     description: "Type of enviroment"
 steps:
+  - checkout
   - restore_composer_cache
   - restore_npm_cache
   - controlla_release

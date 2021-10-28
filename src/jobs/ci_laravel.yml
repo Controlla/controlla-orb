@@ -6,6 +6,7 @@ executor: laravel
 working_directory: ~/laravel
 
 steps:
+  - checkout
   - php_extensions
   - restore_composer_cache
   - run_composer
