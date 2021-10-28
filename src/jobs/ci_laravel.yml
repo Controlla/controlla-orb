@@ -3,6 +3,8 @@ description: >
 
 executor: laravel
 
+working_directory: ~/laravel
+
 steps:
   - php_extensions
   - restore_composer_cache

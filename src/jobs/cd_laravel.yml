@@ -3,6 +3,8 @@ description: >
 
 executor: laravel
 
+working_directory: ~/laravel
+
 parameters:
   enviroment:
     type: string
