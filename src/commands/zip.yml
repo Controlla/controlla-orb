@@ -1,7 +1,5 @@
 description: >
   Compress files
 
-working_directory: ~/laravel
-
 steps:
   - run: zip aws.zip -r * .[^.]* --exclude=vendor/* --exclude=node_modules/* --exclude=frontend/* --exclude=.circleci/* --exclude=.elasticbeanstalk/* --exclude=.git/*
