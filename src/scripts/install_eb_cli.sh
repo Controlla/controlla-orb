@@ -15,8 +15,30 @@ elif uname -a | grep Linux > /dev/null 2>&1; then
     $SUDO apt-get -qq -y install build-essential zlib1g-dev libssl-dev libncurses-dev libffi-dev libsqlite3-dev libreadline-dev libbz2-dev
     if [ "$(which python3 | tail -1)" ]; then
         echo "Python3 env found"
+        if [ "$(which pip | tail -1)" ]; then
+            echo "pip found"
+        else
+            echo "pip not found"
+            $SUDO apt-get update
+            $SUDO apt-get install -qq -y python3-setuptools
+            curl https://bootstrap.pypa.io/pip/3.5/get-pip.py | python3
+        fi
+        # install venv with system for pipx
+        # by using pipx we dont have to worry about activating the virtualenv before using eb
+        $SUDO apt-get -qq -y install python3-venv
+        pip install pipx
     else
         echo "Python3 env not found, setting up python with apt"
+        # setups python3
+        $SUDO apt-get -qq -y install python3-dev
+         if [ "$(which pip | tail -1)" ]; then
+            echo "pip found"
+        else
+            echo "pip not found"
+            $SUDO apt-get update
+            $SUDO apt-get install -qq -y python3-setuptools
+            curl https://bootstrap.pypa.io/pip/3.5/get-pip.py | python3
+        fi
     fi
 fi
     pipx install awsebcli
