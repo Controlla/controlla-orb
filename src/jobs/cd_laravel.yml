@@ -18,5 +18,6 @@ steps:
   - aws_permissions
   - zip
   - setup
+  - install_eb_cli
   - deploy:
       enviroment: << parameters.enviroment >>

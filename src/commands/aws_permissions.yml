@@ -2,6 +2,6 @@ description: >
   Add permmissions to aws scripts
 
 steps:
-  - run: chmod +x .platform/hooks/prebuild/*.sh
-  - run: chmod +x .platform/hooks/predeploy/*.sh
-  - run: chmod +x .platform/hooks/postdeploy/*.sh
+  - run:
+      name: Run permissions
+      command: <<include(scripts/aws_permissions.sh)>>
