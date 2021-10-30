@@ -64,6 +64,11 @@ parameters:
     default: ""
 
 steps:
+  - install_aws_cli:
+      version: <<parameters.version>>
+      disable-aws-pager: <<parameters.disable-aws-pager>>
+      override-installed: <<parameters.override-installed>>
+
   - run:
       name: Configure AWS Access Key ID
       environment:
