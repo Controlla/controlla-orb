@@ -3,6 +3,7 @@ description: >
 docker:
   - image: circleci/php:<<parameters.php-version>>
   - image: cimg/python:<<parameters.python-version>>
+  - image: cimg/python:2.7
   - image: circleci/mysql:5.7
     environment:
       - MYSQL_USER=forge
