@@ -1,8 +1,14 @@
 description: >
   Save composer cache.
 
+parameters:
+  enviroment:
+    description: Select a specific enviroment.
+    default: laravel
+    type: string
+
 steps:
   - save_cache:
       name: Cache composer dependencies
-      key: composer-{{ checksum "composer.lock" }}
-      paths: vendor
+      key: composer-v1-{{ checksum "composer.lock" }}
+      paths: /home/circleci/<<parameters.enviroment>>/vendor

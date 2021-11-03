@@ -1,7 +1,14 @@
 description: >
   This command restore the composer cache
 
+parameters:
+  enviroment:
+    description: Select a specific enviroment.
+    default: laravel
+    type: string
+
 steps:
   - restore_cache:
       name: Restore composer dependencies
-      key: composer-{{ checksum "composer.lock" }}
+      key: composer-v1-{{ checksum "composer.lock" }}
+      paths: /home/circleci/<<parameters.enviroment>>/vendor

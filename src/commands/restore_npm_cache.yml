@@ -1,9 +1,14 @@
 description: >
   This command make release of proyect.
 
+parameters:
+  enviroment:
+    description: Select a specific enviroment.
+    default: laravel
+    type: string
+
 steps:
   - restore_cache:
       name: Restore npm dependencies
-      key: npm-{{ checksum "frontend/package-lock.json" }}-{{ .Environment.CACHE_VERSION_NPM }}
-      paths:
-        - frontend/node_modules
+      key: npm-v1-{{ checksum "frontend/package-lock.json" }}-{{ .Environment.CACHE_VERSION_NPM }}
+      paths: /home/circleci/<<parameters.enviroment>>/frontend/node_modules
