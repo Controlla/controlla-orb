@@ -2,4 +2,4 @@ description: >
   Install npm depencies
 
 steps:
-  - run: cd frontend && yarn install
+  - run: cd frontend && npm install

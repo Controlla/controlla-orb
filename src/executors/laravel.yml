@@ -1,9 +1,8 @@
 description: >
   Highly cached minimal Ubuntu docker designed for CircleCI with php, python and mysql installed.
 docker:
-  - image: circleci/php:<<parameters.php-version>>
+  - image: cimg/php:<<parameters.php-version>>
   - image: cimg/python:<<parameters.python-version>>
-  - image: cimg/python:2.7
   - image: circleci/mysql:5.7
     environment:
       - MYSQL_USER=forge
@@ -12,7 +11,7 @@ docker:
       - MYSQL_DATABASE=ci_db
 parameters:
   php-version:
-    default: "7.4-node-browsers"
+    default: "7.4-node"
     description: >
       Select your php version or any of the available tags here: https://hub.docker.com/r/cimg/php.
     type: string
