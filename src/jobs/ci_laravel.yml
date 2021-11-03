@@ -7,7 +7,6 @@ working_directory: ~/laravel
 
 steps:
   - checkout
-  - php_extensions
   - restore_composer_cache
   - run_composer
   - save_composer_cache
