@@ -10,5 +10,5 @@ parameters:
 steps:
   - save_cache:
       name: Cache npm dependencies
-      key: npm-v1-{{ checksum "frontend/package-lock.json" }}-{{ .Environment.CACHE_VERSION_NPM }}
+      key: npm-v1-{{ checksum "frontend/package-lock.json" }}
       paths: /home/circleci/<<parameters.enviroment>>/frontend/node_modules
