@@ -1,4 +1,4 @@
 description: >
   Highly cached minimal Ubuntu docker designed for CircleCI with Node installed.
 docker:
-  - image: circleci/node:lts
+  - image: circleci/node:12.14.1
