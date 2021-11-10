@@ -3,6 +3,8 @@ description: >
 
 executor: nuxt
 
+working_directory: ~/controlla
+
 parameters:
   bucket:
     type: string

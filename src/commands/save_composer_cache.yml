@@ -4,7 +4,7 @@ description: >
 parameters:
   enviroment:
     description: Select a specific enviroment.
-    default: laravel
+    default: controlla
     type: string
 
 steps:

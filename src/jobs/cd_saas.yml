@@ -3,7 +3,7 @@ description: >
 
 executor: laravel
 
-working_directory: ~/laravel
+working_directory: ~/controlla
 
 parameters:
   enviroment:
