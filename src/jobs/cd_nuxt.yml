@@ -11,7 +11,8 @@ parameters:
 
 steps:
   - checkout
-  - restore_npm_cache
+  - restore_npm_cache:
+      directory: ""
   - build_generate
   - aws-s3/sync:
       arguments: |

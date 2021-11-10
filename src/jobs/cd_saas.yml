@@ -13,7 +13,10 @@ parameters:
 steps:
   - checkout
   - restore_composer_cache
-  - restore_npm_cache
+  - restore_npm_cache:
+      directory: "central/"
+  - restore_npm_cache:
+      directory: "tenant/"
   - controlla_release
   - aws_permissions
   - zip

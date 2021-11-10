@@ -6,9 +6,9 @@ executor: nuxt
 steps:
   - checkout
   - restore_npm_cache:
-      directory: "/"
+      directory: ""
   - npm_nuxt_install
   - save_npm_cache:
-      directory: "/"
+      directory: ""
   - run_lint
   - run_npm_tests
