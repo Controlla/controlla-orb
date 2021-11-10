@@ -9,3 +9,6 @@ description: >
 display:
   home_url: "https://www.website.com/docs"
   source_url: "https://bitbucket.org/controlla-mx/controlla-orb"
+
+orbs:
+  aws-s3: circleci/aws-s3@2.0.0

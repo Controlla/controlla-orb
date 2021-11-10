@@ -1,0 +1,5 @@
+description: >
+  Run generate
+
+steps:
+  - run: npm run generate

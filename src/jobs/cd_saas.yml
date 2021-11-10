@@ -1,5 +1,5 @@
 description: >
-  Deploy to aws elasticbeanstalk
+  Deploy to QA
 
 executor: laravel
 

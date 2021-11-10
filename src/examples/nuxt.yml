@@ -8,26 +8,26 @@ usage:
   workflows:
     build-deploy:
       jobs:
-        - controlla/ci_laravel:
+        - controlla/ci_nuxt:
             filters:
               branches:
                 only:
                   - master
                   - QA
-        - controlla/cd_laravel:
-            enviroment: ExpertQA-env
+        - controlla/cd_nuxt:
+            bucket: nuxt.controlla.com.mx
             context: AWS
             requires:
-              - controlla/ci_laravel
+              - controlla/ci_nuxt
             filters:
               branches:
                 only:
                   - QA
-        - controlla/cd_laravel:
-            enviroment: Expert-env
+        - controlla/cd_nuxt:
+            bucket: nuxt.com
             context: AWS
             requires:
-              - controlla/ci_laravel
+              - controlla/ci_nuxt
             filters:
               branches:
                 only:

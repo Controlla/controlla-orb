@@ -1,5 +1,11 @@
 description: >
   Install npm depencies
 
+parameters:
+  directory:
+    description: Select a specific directory.
+    default: "frontend"
+    type: string
+
 steps:
-  - run: cd frontend && npm install
+  - run: cd <<parameters.directory>> && npm install

@@ -1,0 +1,25 @@
+description: >
+  Install dependencies and run tests
+
+executor: laravel
+
+working_directory: ~/laravel
+
+steps:
+  - checkout
+  - restore_composer_cache
+  - run_composer
+  - save_composer_cache
+  - restore_npm_cache:
+      directory: "central/"
+  - npm_install:
+      directory: "central"
+  - save_npm_cache:
+      directory: "central/"
+  - restore_npm_cache:
+      directory: "tenant/"
+  - npm_install:
+      directory: "tenant"
+  - save_npm_cache:
+      directory: "tenant/"
+  - run_tests

@@ -1,12 +1,29 @@
 description: >
-  Install dependencies and run tests
+  Deploy to s3 bucket
 
 executor: nuxt
+
+parameters:
+  bucket:
+    type: string
+    default: "nuxt.com"
+    description: "Type of bucket"
 
 steps:
   - checkout
   - restore_npm_cache
-  - npm_install
-  - save_npm_cache
-  - run_lint
-  - run_npm_tests
+  - build_generate
+  - aws-s3/sync:
+      arguments: |
+        --acl public-read \
+        --cache-control "max-age=31536000" \
+        --exclude "*.html"
+      from: controlla
+      to: s3://<< parameters.bucket >>
+  - aws-s3/copy:
+      arguments: |
+        --recursive \
+        --acl public-read \
+        --exclude "*" --include "*.html"
+      from: controlla
+      to: s3://<< parameters.bucket >>

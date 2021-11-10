@@ -6,9 +6,13 @@ parameters:
     description: Select a specific enviroment.
     default: laravel
     type: string
+  directory:
+    description: Select a specific directory.
+    default: "frontend/"
+    type: string
 
 steps:
   - restore_cache:
       name: Restore npm dependencies
-      key: npm-v1-{{ checksum "frontend/package-lock.json" }}
-      paths: /home/circleci/<<parameters.enviroment>>/frontend/node_modules
+      key: npm-v1-{{ checksum "<<parameters.directory>>package-lock.json" }}
+      paths: /home/circleci/<<parameters.enviroment>>/<<parameters.directory>>node_modules
