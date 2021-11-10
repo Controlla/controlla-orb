@@ -14,5 +14,5 @@ parameters:
 steps:
   - restore_cache:
       name: Restore npm dependencies
-      key: npm-v1-{{ checksum "<<parameters.directory>>package-lock.json" }}
+      key: npm-v1-<<parameters.directory>>-{{ checksum "<<parameters.directory>>package-lock.json" }}
       paths: /home/circleci/<<parameters.enviroment>>/<<parameters.directory>>node_modules
