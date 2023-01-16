@@ -1,5 +1,4 @@
-description: >
-  Deploy in aws enviroment.
+description: Deploy in aws enviroment.
 
 parameters:
   enviroment:
@@ -8,4 +7,4 @@ parameters:
     type: string
 
 steps:
-  - run: eb deploy <<parameters.enviroment>> --profile controlla
+  - run: "eb deploy <<parameters.enviroment>> --profile controlla"

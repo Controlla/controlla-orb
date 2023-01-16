@@ -2,4 +2,4 @@ description: >
   Install npm depencies
 
 steps:
-  - run: npm install
+  - run: "npm install"

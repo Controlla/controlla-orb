@@ -1,14 +1,14 @@
 version: 2.1
 
 description: >
-  A simple Controlla Orb to deploy on aws.
+  A simple Orb to CI/CD pipelines with CircleCI to build, test and deploy your controlla projects to AWS.
 # What will your orb allow users to accomplish?
 # Descriptions should be short, simple, and informative.
 
 # This information will be displayed in the orb registry and is not mandatory.
 display:
-  home_url: "https://www.website.com/docs"
-  source_url: "https://bitbucket.org/controlla-mx/controlla-orb"
+  home_url: "https://developers.controlla.com.mx"
+  source_url: "https://github.com/Controlla/controlla-orb"
 
 orbs:
   aws-s3: circleci/aws-s3@2.0.0

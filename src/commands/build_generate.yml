@@ -2,4 +2,4 @@ description: >
   Run generate
 
 steps:
-  - run: npm run generate
+  - run: "npm run generate"

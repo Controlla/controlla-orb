@@ -2,5 +2,5 @@ description: >
   This command make release of proyect.
 
 steps:
-  - run: sudo npm i -g @controlla/cli
-  - run: controlla release -f -m npm
+  - run: "sudo npm i -g @controlla/cli"
+  - run: "controlla release -f -m npm"
