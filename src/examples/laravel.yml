@@ -9,6 +9,7 @@ usage:
     build-deploy:
       jobs:
         - controlla/ci_laravel:
+            php-version: "7.4.24-node"
             filters:
               branches:
                 only:

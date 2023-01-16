@@ -1,10 +1,18 @@
 description: >
   Install dependencies and run tests
 
-executor: laravel
+executor:
+  name: laravel
+  php-version: <<parameters.php-version>>
 
 working_directory: ~/controlla
 
+parameters:
+  php-version:
+    default: "7.4.24-node"
+    description: >
+      Select your php version or any of the available tags here: https://hub.docker.com/r/cimg/php.
+    type: string
 steps:
   - checkout
   - restore_composer_cache
