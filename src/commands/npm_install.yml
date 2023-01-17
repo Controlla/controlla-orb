@@ -1,5 +1,5 @@
 description: >
-  Install npm depencies
+  Install npm dependencies
 
 parameters:
   directory:
@@ -8,4 +8,6 @@ parameters:
     type: string
 
 steps:
-  - run: "cd <<parameters.directory>> && npm install"
+  - run: 
+      name: Install npm dependencies
+      command: cd <<parameters.directory>> && npm install

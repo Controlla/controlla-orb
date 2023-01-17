@@ -2,4 +2,6 @@ description: >
   Run generate
 
 steps:
-  - run: "npm run generate"
+  - run:
+      name: Build generate 
+      command: npm run generate

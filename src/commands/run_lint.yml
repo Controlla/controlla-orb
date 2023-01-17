@@ -2,4 +2,6 @@ description: >
   Run linter
 
 steps:
-  - run: "npm run lint"
+  - run:   
+      name: Run lint
+      command: npm run lint

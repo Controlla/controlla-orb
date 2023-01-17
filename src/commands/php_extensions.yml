@@ -2,11 +2,27 @@ description: >
   This command install php extensions.
 
 steps:
-  - run: "sudo apt install -y zlib1g-dev libicu-dev g++"
-  - run: "sudo apt-get install -y libpng-dev"
-  - run: "sudo docker-php-ext-install zip"
-  - run: "sudo docker-php-ext-install pdo_mysql"
-  - run: "sudo docker-php-ext-install gd"
-  - run: "sudo docker-php-ext-install exif"
-  - run: "sudo docker-php-ext-configure intl && sudo docker-php-ext-install intl"
-  - run: "sudo composer self-update"
+  - run:  
+      name: Install php extension
+      command: sudo apt install -y zlib1g-dev libicu-dev g++
+  - run:  
+      name: Install php extension
+      command: sudo apt-get install -y libpng-dev
+  - run:  
+      name: Install php extension
+      command: sudo docker-php-ext-install zip
+  - run:  
+      name: Install php extension
+      command: sudo docker-php-ext-install pdo_mysql
+  - run:  
+      name: Install php extension
+      command: sudo docker-php-ext-install gd
+  - run:  
+      name: Install php extension
+      command: sudo docker-php-ext-install exif
+  - run:  
+      name: Install php extension
+      command: sudo docker-php-ext-configure intl && sudo docker-php-ext-install intl
+  - run:  
+      name: Install php extension
+      command: sudo composer self-update

@@ -2,4 +2,6 @@ description: >
   Compress files
 
 steps:
-  - run: "zip aws.zip -r * .[^.]* --exclude=vendor/* --exclude=node_modules/* --exclude=frontend/* --exclude=central/* --exclude=tenant/* --exclude=.circleci/* --exclude=.elasticbeanstalk/* --exclude=.git/*"
+  - run:   
+      name: Zip proyect.
+      command: zip aws.zip -r * .[^.]* --exclude=vendor/* --exclude=node_modules/* --exclude=frontend/* --exclude=central/* --exclude=tenant/* --exclude=.circleci/* --exclude=.elasticbeanstalk/* --exclude=.git/*

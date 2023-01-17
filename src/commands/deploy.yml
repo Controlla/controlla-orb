@@ -7,4 +7,6 @@ parameters:
     type: string
 
 steps:
-  - run: "eb deploy <<parameters.enviroment>> --profile controlla"
+  - run: 
+      name: Deploy on AWS
+      command: eb deploy <<parameters.enviroment>> --profile controlla
