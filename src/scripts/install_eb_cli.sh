@@ -1,3 +1,4 @@
+#!/bin/bash
 if [[ $EUID == 0 ]]; then export SUDO=""; else # Check if we are root
   export SUDO="sudo";
 fi

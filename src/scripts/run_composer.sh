@@ -1,3 +1,4 @@
+#!/bin/bash
 cp .env.ci.example .env
 composer install -n --prefer-dist
 composer run key:generate

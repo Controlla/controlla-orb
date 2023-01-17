@@ -1,1 +1,2 @@
-zip aws.zip -r * .[^.]* --exclude=vendor/* --exclude=node_modules/* --exclude=frontend/* --exclude=central/* --exclude=tenant/* --exclude=.circleci/* --exclude=.elasticbeanstalk/* --exclude=.git/*
+#!/bin/bash
+zip aws.zip -r ./* .[^.]* --exclude=vendor/* --exclude=node_modules/* --exclude=frontend/* --exclude=central/* --exclude=tenant/* --exclude=.circleci/* --exclude=.elasticbeanstalk/* --exclude=.git/*
