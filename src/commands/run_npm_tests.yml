@@ -2,6 +2,6 @@ description: >
   Run tests
 
 steps:
-  - run:  
+  - run:
       name: Run tests
       command:  npm run test

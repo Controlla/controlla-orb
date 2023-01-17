@@ -3,5 +3,5 @@ description: >
 
 steps:
   - run:
-      name: Build generate 
+      name: Build generate
       command: npm run generate

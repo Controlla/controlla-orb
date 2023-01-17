@@ -2,6 +2,6 @@ description: >
   Install npm depencies
 
 steps:
-  - run:  
+  - run:
       name: Install npm dependencies
       command: npm install

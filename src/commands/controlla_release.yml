@@ -2,9 +2,9 @@ description: >
   This command make release of proyect.
 
 steps:
-  - run: 
+  - run:
       name: Install Controlla CLI
       command: sudo npm i -g @controlla/cli
-  - run: 
+  - run:
       name: Run controlla release
       command: controlla release -f -m npm

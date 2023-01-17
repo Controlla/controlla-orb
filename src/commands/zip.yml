@@ -2,6 +2,6 @@ description: >
   Compress files
 
 steps:
-  - run:   
+  - run:
       name: Zip proyect.
       command: <<include(scripts/zip.sh)>>

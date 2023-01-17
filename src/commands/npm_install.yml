@@ -8,6 +8,6 @@ parameters:
     type: string
 
 steps:
-  - run: 
+  - run:
       name: Install npm dependencies
       command: cd <<parameters.directory>> && npm install
