@@ -22,7 +22,10 @@ steps:
       command: sudo docker-php-ext-install exif
   - run:  
       name: Install php extension
-      command: sudo docker-php-ext-configure intl && sudo docker-php-ext-install intl
+      command: sudo docker-php-ext-configure intl
+  - run:  
+      name: Install php extension
+      command: sudo docker-php-ext-install intl
   - run:  
       name: Install php extension
       command: sudo composer self-update
