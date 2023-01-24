@@ -20,7 +20,9 @@ parameters:
 steps:
   - checkout
   - restore_composer_cache
+  - run_composer
   - restore_npm_cache
+  - npm_install
   - controlla_release
   - aws_permissions
   - zip
