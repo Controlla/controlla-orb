@@ -3,8 +3,5 @@ description: >
 
 steps:
   - run:
-      name: Install Controlla CLI
-      command: sudo npm i -g @controlla/cli
-  - run:
       name: Run controlla release
       command: controlla release -f -m npm
