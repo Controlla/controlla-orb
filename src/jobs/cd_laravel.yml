@@ -13,16 +13,12 @@ parameters:
     default: "laravel"
     description: "Type of enviroment"
   php-version:
-    default: "7.4.24-node"
-    description: >
-      Select your php version or any of the available tags here: https://hub.docker.com/r/cimg/php.
+    default: "8.1"
     type: string
 steps:
   - checkout
   - restore_composer_cache
-  - run_composer
   - restore_npm_cache
-  - npm_install
   - controlla_release
   - aws_permissions
   - zip
