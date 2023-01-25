@@ -19,6 +19,7 @@ steps:
   - checkout
   - restore_composer_cache
   - restore_npm_cache
+  - npm_install
   - controlla_release
   - aws_permissions
   - zip
